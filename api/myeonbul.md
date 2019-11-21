@@ -26,7 +26,7 @@ HTTP Authorization 헤더에 JWT를 삽입함
 * 면불 해당 학생 : 문자열 리스트
 * 면불 사유 : 문자열
 
-{% api-method method="post" host="https://api.iasa.kr" path="/create" %}
+{% api-method method="post" host="https://api.iasa.kr" path="/v1/myeonbul/create" %}
 {% api-method-summary %}
 면학 불참 생성
 {% endapi-method-summary %}
@@ -62,7 +62,7 @@ HTTP Authorization 헤더에 JWT를 삽입함
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="https://api.iasa.kr" path="/modify" %}
+{% api-method method="put" host="https://api.iasa.kr" path="/v1/myeonbul/modify" %}
 {% api-method-summary %}
 면학 불참 수정
 {% endapi-method-summary %}
@@ -94,7 +94,7 @@ HTTP Authorization 헤더에 JWT를 삽입함
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="https://api.iasa.kr" path="/delete" %}
+{% api-method method="delete" host="https://api.iasa.kr" path="/v1/myeonbul/delete" %}
 {% api-method-summary %}
 면학 불참 삭제
 {% endapi-method-summary %}
