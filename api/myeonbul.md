@@ -26,6 +26,8 @@ HTTP Authorization 헤더에 JWT를 삽입함
 * 면불 해당 학생 : 문자열 리스트
 * 면불 사유 : 문자열
 
+**보안상의 이유로 HTTPS 연결에서만 Myeonbul API가 작동합니다.**
+
 {% api-method method="post" host="https://api.iasa.kr" path="/myeonbul" %}
 {% api-method-summary %}
 면학 불참 생성
@@ -180,6 +182,104 @@ HTTP Authorization 헤더에 JWT를 삽입함
 
 ```
 
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="put" host="https://api.iasa.kr" path="/myeonbul/verify" %}
+{% api-method-summary %}
+ 면학 불참 승인
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="string" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Myeonbul has been verified.
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+Your account does not have the necessary permissions to authorize Myeonbul record.
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+There is no Myeonbul entry for the ID.
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://api.iasa.kr" path="/myeonbul/verify" %}
+{% api-method-summary %}
+면학 불참 승인
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Myeonbul is authorized
+{% endapi-method-response-example-description %}
+
+```
+{
+  "status": "Not verified"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=202 %}
+{% api-method-response-example-description %}
+Myeonbul is not authorized yet.
+{% endapi-method-response-example-description %}
+
+```
+{
+  "status": "Not verified"
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
