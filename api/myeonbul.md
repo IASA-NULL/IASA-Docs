@@ -26,7 +26,7 @@ HTTP Authorization 헤더에 JWT를 삽입함
 * 면불 해당 학생 : 문자열 리스트
 * 면불 사유 : 문자열
 
-{% api-method method="post" host="https://api.iasa.kr" path="/create" %}
+{% api-method method="post" host="https://api.iasa.kr" path="/myeonbul" %}
 {% api-method-summary %}
 면학 불참 생성
 {% endapi-method-summary %}
@@ -37,6 +37,36 @@ HTTP Authorization 헤더에 JWT를 삽입함
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="title" type="string" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="students" type="array" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="teacher" type="integer" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="end\_time" type="integer" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="start\_time" type="integer" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="date" type="integer" required=true %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="place" type="string" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=201 %}
@@ -62,7 +92,7 @@ HTTP Authorization 헤더에 JWT를 삽입함
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="put" host="https://api.iasa.kr" path="/modify" %}
+{% api-method method="put" host="https://api.iasa.kr" path="/myeonbul" %}
 {% api-method-summary %}
 면학 불참 수정
 {% endapi-method-summary %}
@@ -74,10 +104,40 @@ HTTP Authorization 헤더에 JWT를 삽입함
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
+{% api-method-parameter name="id" type="string" required=false %}
 
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="place" type="string" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="date" type="integer" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="start\_time" type="integer" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="end\_time" type="integer" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="teacher" type="integer" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="students" type="array" required=false %}
+
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="title" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -94,7 +154,7 @@ HTTP Authorization 헤더에 JWT를 삽입함
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="https://api.iasa.kr" path="/delete" %}
+{% api-method method="delete" host="https://api.iasa.kr" path="/myeonbul" %}
 {% api-method-summary %}
 면학 불참 삭제
 {% endapi-method-summary %}
@@ -106,8 +166,8 @@ HTTP Authorization 헤더에 JWT를 삽입함
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-parameter name="id" type="string" required=false %}
+ 면불 ID
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
