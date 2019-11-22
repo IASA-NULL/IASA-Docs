@@ -8,11 +8,11 @@ description: 계정 API
 
 {% api-method method="post" host="https://api.iasa.kr/" path="account/login" %}
 {% api-method-summary %}
-로그
+로그인
 {% endapi-method-summary %}
 
 {% api-method-description %}
-추후 구현 예
+추후 구현 예정
 {% endapi-method-description %}
 
 {% api-method-spec %}
