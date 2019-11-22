@@ -312,7 +312,7 @@ Myeonbul is not authorized yet.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="https://api.iasa.kr" path="/myeonbul/list" %}
+{% api-method method="get" host="https://api.iasa.kr" path="/myeonbul/list" %}
 {% api-method-summary %}
 학생 면불 조회
 {% endapi-method-summary %}
@@ -357,7 +357,7 @@ jwt 토큰
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="post" host="https://api.iasa.kr" path="/myeonbul/info" %}
+{% api-method method="get" host="https://api.iasa.kr" path="/myeonbul/info" %}
 {% api-method-summary %}
 면불 정보 조회
 {% endapi-method-summary %}
