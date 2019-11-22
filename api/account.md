@@ -66,11 +66,11 @@ description: 계정 API
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
-{% api-method-parameter name="studentId" type="string" required=false %}
+{% api-method-parameter name="studentId" type="string" required=true %}
 학번
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="password" type="string" required=false %}
+{% api-method-parameter name="password" type="string" required=true %}
 비밀번호
 {% endapi-method-parameter %}
 
@@ -153,7 +153,7 @@ jwt 토큰을 받으면 학번을 리턴합니다.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
-{% api-method-parameter name="auth" type="string" required=false %}
+{% api-method-parameter name="auth" type="string" required=true %}
 jwt 토큰
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
