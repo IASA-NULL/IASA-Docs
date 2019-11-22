@@ -58,9 +58,9 @@ description: 계정 API
 {% endapi-method-summary %}
 
 {% api-method-description %}
-사용자 이메일로 인증 메일 전송  
-밑의 이메일 인증에서 사용할 id\(uuid기반\) 생성/저장.  
-이메일 인증시 next 파라미터는 https://iasa.kr/signup/finalize
+사용자 이메일로 인증 메일을 전송합니다.  
+밑의 이메일 인증에서 사용할 id\(uuid기반\) 생성/저장합니다.  
+이메일 인증시 next 파라미터는 https://iasa.kr/signup/finalize입니다.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -96,7 +96,7 @@ description: 계정 API
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+이메일 인증에 첨부되는 링크입다.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -121,6 +121,38 @@ description: 계정 API
 
 ```
 
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="post" host="https://api.iasa.kr" path="/account/studentid" %}
+{% api-method-summary %}
+학번 불러오기
+{% endapi-method-summary %}
+
+{% api-method-description %}
+jwt 토큰을 받으면 학번을 리턴합니다.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="auth" type="string" required=false %}
+jwt 토
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+학번
+{% endapi-method-response-example-description %}
+
+```
+{'studentId':2019001}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
