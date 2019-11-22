@@ -12,7 +12,8 @@ description: 계정 API
 {% endapi-method-summary %}
 
 {% api-method-description %}
-추후 구현 예정
+아이디와 비밀번호를 주면 로그인을 하여 성공시 jwt 토큰을 반환합니다.  
+**추후 구현 예정**
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -60,7 +61,9 @@ description: 계정 API
 {% api-method-description %}
 사용자 이메일로 인증 메일을 전송합니다.  
 밑의 이메일 인증에서 사용할 id\(uuid기반\) 생성/저장합니다.  
-이메일 인증시 next 파라미터는 https://iasa.kr/signup/finalize입니다.
+이메일 인증시 next 파라미터는 https://iasa.kr/signup/finalize입니다.  
+  
+**추후 구현 예정**
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -110,7 +113,8 @@ description: 계정 API
 {% endapi-method-summary %}
 
 {% api-method-description %}
-이메일 인증에 첨부되는 링크입니다.
+이메일 인증에 첨부되는 링크입니다.  
+**추후 구현 예정**
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -147,7 +151,8 @@ description: 계정 API
 {% endapi-method-summary %}
 
 {% api-method-description %}
-jwt 토큰을 받으면 학번을 리턴합니다.
+jwt 토큰을 받으면 학번을 리턴합니다.  
+**추후 구현 예정**
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -179,14 +184,15 @@ jwt 토큰
 {% endapi-method-summary %}
 
 {% api-method-description %}
-p특정 계정\(이메일\)이 가입되었는지 확인합니다.
+특정 계정\(이메일\)이 가입되었는지 확인합니다.  
+**추후 구현 예정**
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=false %}
-가입되었는지 확인할 이메
+가입되었는지 확인할 이메일
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
