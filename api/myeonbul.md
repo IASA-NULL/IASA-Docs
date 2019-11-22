@@ -9,12 +9,6 @@ description: 면불 API
 | 401 Unauthorized | 유효하지 않은 JWT |
 | 500 Internal Server Error | 서버 오류 |
 
-### 인증
-
-HTTP Authorization 헤더에 JWT를 삽입함
-
-\*면불 수정시 JWT 필요.
-
 ### 정보
 
 * 면불 ID : 날짜\(YYYYMMDD\)\_ID
@@ -34,7 +28,7 @@ HTTP Authorization 헤더에 JWT를 삽입함
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+jwt 토큰에 따라 학생이면 verify=false, 선생님이면 verify=true
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -113,7 +107,7 @@ jwt 토큰
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=false %}
-
+면불 id
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
