@@ -105,12 +105,6 @@ jwt 토큰
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" required=true %}
-면불 id
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-
 {% api-method-headers %}
 {% api-method-parameter name="auth" type="string" required=true %}
 jwt 토큰
@@ -118,6 +112,10 @@ jwt 토큰
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="id" type="string" required=true %}
+면불 id
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="place" type="string" required=true %}
 
 {% endapi-method-parameter %}
