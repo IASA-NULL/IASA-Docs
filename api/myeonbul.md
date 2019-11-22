@@ -314,7 +314,7 @@ Myeonbul is not authorized yet.
 
 {% api-method method="get" host="https://api.iasa.kr" path="/myeonbul/list" %}
 {% api-method-summary %}
-학생 면불 조회
+학생 면불 목록 조회
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -401,6 +401,58 @@ jwt 토큰
    "date":20191122,
    "place":"컴퓨터실 I"
 }
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="head" host="https://api.iasa.kr" path="/myeonbul" %}
+{% api-method-summary %}
+  면불 여부 조
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="barcode" type="integer" required=false %}
+ 바코드 번호 
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+ 현재 시각 면불 대상임 
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+현재 시각 면불 대상이 아
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=500 %}
+{% api-method-response-example-description %}
+ 바코드를 찾을 수 없거나 서버 처리 중 에러.
+{% endapi-method-response-example-description %}
+
+```
+
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
