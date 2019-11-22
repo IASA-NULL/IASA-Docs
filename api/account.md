@@ -66,6 +66,10 @@ description: 계정 API
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
+{% api-method-parameter name="studentId" type="string" required=false %}
+학번
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="password" type="string" required=false %}
 비밀번호
 {% endapi-method-parameter %}
@@ -79,7 +83,17 @@ description: 계정 API
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
+성공
+{% endapi-method-response-example-description %}
 
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+오류
 {% endapi-method-response-example-description %}
 
 ```
@@ -96,7 +110,7 @@ description: 계정 API
 {% endapi-method-summary %}
 
 {% api-method-description %}
-이메일 인증에 첨부되는 링크입다.
+이메일 인증에 첨부되는 링크입니다.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -140,7 +154,7 @@ jwt 토큰을 받으면 학번을 리턴합니다.
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="auth" type="string" required=false %}
-jwt 토
+jwt 토큰
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
