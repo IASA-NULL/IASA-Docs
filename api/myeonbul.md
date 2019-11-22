@@ -45,7 +45,7 @@ jwt 토큰
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="students" type="array" required=true %}
-학번, 문자열 리스트로 제공
+학번, 숫자 리스트로 제공
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="teacher" type="integer" required=true %}
