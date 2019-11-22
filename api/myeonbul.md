@@ -39,29 +39,35 @@ HTTP Authorization 헤더에 JWT를 삽입함
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="auth" type="string" required=false %}
+jwt 토큰
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
 {% api-method-body-parameters %}
 {% api-method-parameter name="title" type="string" required=true %}
-
+면불 사유
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="students" type="array" required=true %}
-
+학번, 문자열 리스트로 제
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="teacher" type="integer" required=true %}
-
+선생님 일련번호
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="end\_time" type="integer" required=true %}
-
+면불 종료시간, 4자리 정수\(ex:2100\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="start\_time" type="integer" required=true %}
-
+면불 시작시간, 4자리 정수\(ex:1900\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="date" type="integer" required=true %}
-
+날짜, 8자리 정수 \(ex:20191122\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="place" type="string" required=true %}
@@ -110,6 +116,12 @@ HTTP Authorization 헤더에 JWT를 삽입함
 
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="auth" type="string" required=false %}
+jwt 토큰
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="place" type="string" required=false %}
@@ -172,6 +184,12 @@ HTTP Authorization 헤더에 JWT를 삽입함
  면불 ID
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="auth" type="string" required=false %}
+jwt 토큰
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 {% endapi-method-request %}
 
 {% api-method-response %}
