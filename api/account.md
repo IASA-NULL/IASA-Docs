@@ -130,7 +130,7 @@ description: 계정 API
 {% api-method-response-example httpCode=302 %}
 {% api-method-response-example-description %}
 인증 성공시 요청 페이지로 리다이렉션  
-인증 실패시 https://iasa.kr/signup/fail로 이
+인증 실패시 https://iasa.kr/signup/fail로 이동합니다.
 {% endapi-method-response-example-description %}
 
 ```
@@ -167,6 +167,38 @@ jwt 토큰
 
 ```
 {'studentId':2019001}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="post" host="https://api.iasa.kr" path="/account/check" %}
+{% api-method-summary %}
+가입 확인
+{% endapi-method-summary %}
+
+{% api-method-description %}
+p특정 계정\(이메일\)이 가입되었는지 확인합니다.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="id" type="string" required=false %}
+가입되었는지 확인할 이메
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+계정이 가입되었으면 true, 아니면 false 리턴
+{% endapi-method-response-example-description %}
+
+```
+{'value':true}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
