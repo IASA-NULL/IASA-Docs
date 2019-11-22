@@ -100,8 +100,7 @@ jwt 토큰
 {% endapi-method-summary %}
 
 {% api-method-description %}
-면불 데이터를 수정합니다.  
-**추후 구현 예정**
+면불 데이터를 수정합니다.
 {% endapi-method-description %}
 
 {% api-method-spec %}
