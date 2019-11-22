@@ -6,7 +6,7 @@ description: 계정 API
 
 모든 계정 API는 https 프로토콜에서만 작동합니다.
 
-{% api-method method="post" host="https://api.iasa.kr/" path="account/login" %}
+{% api-method method="post" host="https://api.iasa.kr" path="/account/signin" %}
 {% api-method-summary %}
 로그인
 {% endapi-method-summary %}
@@ -18,12 +18,12 @@ description: 계정 API
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
-{% api-method-parameter name="password" type="string" required=false %}
+{% api-method-parameter name="password" type="string" required=true %}
 비밀번호
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="id" type="string" required=true %}
-아이디
+이메일
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -52,5 +52,78 @@ description: 계정 API
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% api-method method="post" host="https://api.iasa.kr" path="/account/signup" %}
+{% api-method-summary %}
+회원가입
+{% endapi-method-summary %}
 
+{% api-method-description %}
+사용자 이메일로 인증 메일 전송  
+밑의 이메일 인증에서 사용할 id\(uuid기반\) 생성/저장.  
+이메일 인증시 next 파라미터는 https://iasa.kr/signup/finalize
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="password" type="string" required=false %}
+비밀번호
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="id" type="string" required=true %}
+이메일
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://api.iasa.kr" path="/account/verify/" %}
+{% api-method-summary %}
+이메일 인증
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="next" type="string" required=true %}
+이동할 페이지, base64로 인코딩됨
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="id" type="string" required=true %}
+요청 일련번호
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=302 %}
+{% api-method-response-example-description %}
+인증 성공시 요청 페이지로 리다이렉션  
+인증 실패시 https://iasa.kr/signup/fail로 이
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
