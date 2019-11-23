@@ -309,7 +309,7 @@ Myeonbul is not authorized yet.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://api.iasa.kr" path="/myeonbul/list" %}
+{% api-method method="get" host="https://api.iasa.kr" path="/myeonbul/" %}
 {% api-method-summary %}
 학생 면불 목록 조회
 {% endapi-method-summary %}
