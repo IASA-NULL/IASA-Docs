@@ -210,17 +210,21 @@ jwt 토큰 확인후 선생님인 경우만 처리하고 학생인 경우는 htt
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" required=true %}
-면불 ID
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-
 {% api-method-headers %}
-{% api-method-parameter name="auth" type="string" required=true %}
+{% api-method-parameter name="auth" type="string" required=false %}
 jwt 토큰
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="key" type="string" required=false %}
+Preshared Key
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="id" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
