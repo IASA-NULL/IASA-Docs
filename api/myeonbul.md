@@ -45,7 +45,7 @@ jwt 토큰
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="students" type="array" required=true %}
-학번, 숫자 리스트로 제공
+학번, 정수 리스트로 제공
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="teacher" type="integer" required=true %}
@@ -321,17 +321,17 @@ Myeonbul is not authorized yet.
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="student" type="integer" required=true %}
+조회할 학생의 학번
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
 {% api-method-headers %}
 {% api-method-parameter name="auth" type="string" required=true %}
 jwt 토큰
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
-
-{% api-method-body-parameters %}
-{% api-method-parameter name="student" type="integer" required=true %}
-조회할 학생의 학번
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
