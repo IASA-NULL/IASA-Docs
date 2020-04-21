@@ -4,8 +4,6 @@ description: 계정 API
 
 # 계정
 
-모든 계정 API는 https 프로토콜에서만 작동합니다.
-
 {% api-method method="post" host="https://api.iasa.kr" path="/account/signin" %}
 {% api-method-summary %}
 로그인

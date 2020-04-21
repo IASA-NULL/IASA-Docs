@@ -20,8 +20,6 @@ description: 면불 API
 * 면불 해당 학생 : 문자열 리스트
 * 면불 사유 : 문자열
 
-**보안상의 이유로 HTTPS 연결에서만 Myeonbul API가 작동합니다.**
-
 {% api-method method="post" host="https://api.iasa.kr" path="/myeonbul" %}
 {% api-method-summary %}
 면학 불참 생성
