@@ -2,7 +2,7 @@
 description: 계정 API
 ---
 
-# Account
+# 계정
 
 모든 계정 API는 https 프로토콜에서만 작동합니다.
 
@@ -61,7 +61,6 @@ description: 계정 API
 {% api-method-description %}
 사용자 이메일로 인증 메일을 전송합니다.  
 밑의 이메일 인증에서 사용할 id\(uuid기반\) 생성/저장합니다.  
-이메일 인증시 next 파라미터는 https://iasa.kr/signup/finalize입니다.  
   
 **추후 구현 예정**
 {% endapi-method-description %}

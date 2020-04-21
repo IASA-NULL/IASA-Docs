@@ -2,7 +2,7 @@
 description: 면불 API
 ---
 
-# Myeonbul
+# 면불
 
 | Code | Explanation |
 | :--- | :--- |

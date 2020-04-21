@@ -4,11 +4,11 @@
 
 ## API
 
-* [Myeonbul](api/myeonbul.md)
-* [Geupsik](api/geupsik.md)
-* [Account](api/account.md)
+* [면불](api/myeonbul.md)
+* [급식](api/geupsik.md)
+* [계정](api/account.md)
 
 ## Data
 
-* [Untitled](data/untitled.md)
+* [계정](data/untitled.md)
 
